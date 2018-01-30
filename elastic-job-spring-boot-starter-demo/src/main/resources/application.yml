@@ -1,5 +1,5 @@
 spring:
   elasticjob:
     zookeeper:
-      server-lists: 127.0.0.1
+      server-lists: 127.0.0.1:6181
       namespace: elastic-job-spring-boot-stater-demo

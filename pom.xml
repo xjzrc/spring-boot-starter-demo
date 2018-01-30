@@ -8,6 +8,7 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <modules>
+        <module>spring-boot-demo-embed-zk</module>
         <module>elastic-job-spring-boot-starter-demo</module>
         <module>dubbo-spring-boot-starter-demo</module>
     </modules>
@@ -27,6 +28,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+
+        <curator.version>2.10.0</curator.version>
         <elastic-job-spring-boot-starter.version>1.0.0</elastic-job-spring-boot-starter.version>
         <dubbo-spring-boot-starter.version>1.0.0</dubbo-spring-boot-starter.version>
     </properties>
@@ -42,6 +45,11 @@
                 <groupId>com.alibaba.spring.boot</groupId>
                 <artifactId>dubbo-spring-boot-starter</artifactId>
                 <version>${dubbo-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-test</artifactId>
+                <version>${curator.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
