@@ -11,12 +11,12 @@ public class MyDistributeElasticJobListener extends AbstractDistributeOnceElasti
 
     @Override
     public void doBeforeJobExecutedAtLastStarted(ShardingContexts shardingContexts) {
-        System.out.println("MyDistributeElasticJobListener doBeforeJobExecutedAtLastStarted...");
+        System.out.println(shardingContexts.getJobName() + " | MyDistributeElasticJobListener doBeforeJobExecutedAtLastStarted...");
     }
 
     @Override
     public void doAfterJobExecutedAtLastCompleted(ShardingContexts shardingContexts) {
-        System.out.println("MyDistributeElasticJobListener doAfterJobExecutedAtLastCompleted...");
+        System.out.println(shardingContexts.getJobName() + " | MyDistributeElasticJobListener doAfterJobExecutedAtLastCompleted...");
 
     }
 }

@@ -7,11 +7,11 @@ public class MyElasticJobListener implements ElasticJobListener {
 
     @Override
     public void beforeJobExecuted(ShardingContexts shardingContexts) {
-        System.out.println("MyElasticJobListener beforeJobExecuted");
+        System.out.println(shardingContexts.getJobName() + " | MyElasticJobListener beforeJobExecuted");
     }
 
     @Override
     public void afterJobExecuted(ShardingContexts shardingContexts) {
-        System.out.println("MyElasticJobListener afterJobExecuted");
+        System.out.println(shardingContexts.getJobName() + " | MyElasticJobListener afterJobExecuted");
     }
 }
