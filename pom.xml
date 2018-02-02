@@ -30,7 +30,7 @@
         <java.version>1.8</java.version>
 
         <curator.version>2.10.0</curator.version>
-        <elastic-job-spring-boot-starter.version>1.0.0</elastic-job-spring-boot-starter.version>
+        <elastic-job-lite-spring-boot-starter.version>1.0.0</elastic-job-lite-spring-boot-starter.version>
         <dubbo-spring-boot-starter.version>1.0.0</dubbo-spring-boot-starter.version>
     </properties>
 
@@ -38,8 +38,8 @@
         <dependencies>
             <dependency>
                 <groupId>com.zen.spring.boot</groupId>
-                <artifactId>elastic-job-spring-boot-starter</artifactId>
-                <version>${elastic-job-spring-boot-starter.version}</version>
+                <artifactId>elastic-job-lite-spring-boot-starter</artifactId>
+                <version>${elastic-job-lite-spring-boot-starter.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.alibaba.spring.boot</groupId>
