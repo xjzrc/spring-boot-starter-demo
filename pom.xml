@@ -20,7 +20,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.9.RELEASE</version>
+        <version>1.5.10.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -32,6 +32,7 @@
         <curator.version>2.10.0</curator.version>
         <elastic-job-lite-spring-boot-starter.version>1.0.0</elastic-job-lite-spring-boot-starter.version>
         <dubbo-spring-boot-starter.version>1.0.0</dubbo-spring-boot-starter.version>
+        <disconf-spring-boot-starter.version>1.0.0</disconf-spring-boot-starter.version>
     </properties>
 
     <dependencyManagement>
@@ -40,6 +41,11 @@
                 <groupId>com.github.xjzrc.spring.boot</groupId>
                 <artifactId>elastic-job-lite-spring-boot-starter</artifactId>
                 <version>${elastic-job-lite-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.xjzrc.spring.boot</groupId>
+                <artifactId>disconf-spring-boot-starter</artifactId>
+                <version>${disconf-spring-boot-starter.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.alibaba.spring.boot</groupId>
