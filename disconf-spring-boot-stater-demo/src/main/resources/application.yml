@@ -11,7 +11,7 @@ spring:
     #配置服务器的 HOST(必填)，用逗号分隔  127.0.0.1:8000,127.0.0.1:8000
     conf-server-host: 127.0.0.1
     #APP 请采用 产品线_服务名 格式
-    app: disconf-demo
+    app: disconf_demo
     #环境
     env: rd
     #版本, 请采用 X_X_X_X 格式,注意要用单引号，不然Springboot将会解析成1000
