@@ -23,10 +23,14 @@ public class JedisConfig implements IDisconfUpdate {
 
     protected static final Logger LOGGER = LoggerFactory.getLogger(JedisConfig.class);
 
-    // 代表连接地址
+    /**
+     * 代表连接地址
+     */
     private String host;
 
-    // 代表连接port
+    /**
+     * 代表连接port
+     */
     private int port;
 
     /**
@@ -46,7 +50,7 @@ public class JedisConfig implements IDisconfUpdate {
     /**
      * 端口, 分布式文件配置
      *
-     * @return
+     * @return int
      */
     @DisconfFileItem(name = "redis.port", associateField = "port")
     public int getPort() {
@@ -58,6 +62,7 @@ public class JedisConfig implements IDisconfUpdate {
         LOGGER.info("i' m here: setting redis port");
     }
 
+    @Override
     public void reload() throws Exception {
         LOGGER.info("host: " + host);
     }

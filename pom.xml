@@ -11,6 +11,7 @@
         <module>spring-boot-demo-embed-zk</module>
         <module>elastic-job-spring-boot-starter-demo</module>
         <module>dubbo-spring-boot-starter-demo</module>
+        <module>disconf-spring-boot-stater-demo</module>
     </modules>
     <packaging>pom</packaging>
 
