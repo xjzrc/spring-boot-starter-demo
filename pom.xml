@@ -31,7 +31,7 @@
         <java.version>1.8</java.version>
 
         <curator.version>2.10.0</curator.version>
-        <elastic-job-lite-spring-boot-starter.version>1.0.0</elastic-job-lite-spring-boot-starter.version>
+        <elastic-job-lite-spring-boot-starter.version>1.0.1</elastic-job-lite-spring-boot-starter.version>
         <dubbo-spring-boot-starter.version>1.0.0</dubbo-spring-boot-starter.version>
         <disconf-spring-boot-starter.version>1.0.0</disconf-spring-boot-starter.version>
     </properties>
