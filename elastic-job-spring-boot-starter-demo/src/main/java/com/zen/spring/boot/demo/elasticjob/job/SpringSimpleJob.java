@@ -13,12 +13,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-@ElasticJobConfig(cron = "0/2 * * * * ?", shardingTotalCount = 3,
-        shardingItemParameters = "0=Beijing,1=Shanghai,2=Guangzhou",
-        listener = MyElasticJobListener.class,
-        distributedListener = MyDistributeElasticJobListener.class,
-        startedTimeoutMilliseconds = 5000L,
-        completedTimeoutMilliseconds = 10000L)
+@ElasticJobConfig(cron = "${spring.elasticjob.simple.cron}", shardingTotalCount = "${spring.elasticjob.simple.shardingTotalCount}",
+        shardingItemParameters = "${spring.elasticjob.simple.shardingItemParameters}",
+        listenerClass = "${spring.elasticjob.simple.listenerClass}",
+        distributedListenerClass = "${spring.elasticjob.simple.distributedListenerClass}",
+        startedTimeoutMilliseconds = "${spring.elasticjob.simple.startedTimeoutMilliseconds}",
+        completedTimeoutMilliseconds = "${spring.elasticjob.simple.completedTimeoutMilliseconds}")
 public class SpringSimpleJob implements SimpleJob {
 
     @Resource

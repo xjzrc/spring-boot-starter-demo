@@ -12,9 +12,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-@ElasticJobConfig(cron = "0/2 * * * * ?", shardingTotalCount = 3,
+/*@ElasticJobConfig(cron = "0/2 * * * * ?", shardingTotalCount = 3,
         shardingItemParameters = "0=Beijing,1=Shanghai,2=Guangzhou",
-        listener = MyElasticJobListener.class)
+        listener = MyElasticJobListener.class)*/
 public class SpringDataflowJob implements DataflowJob<Foo> {
 
     @Resource
