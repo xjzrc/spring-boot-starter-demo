@@ -34,6 +34,7 @@ import com.alibaba.dubbo.config.annotation.Service;
 )
 public class DefaultDemoService implements DemoService {
 
+    @Override
     public String sayHello(String name) {
         return "Hello, " + name + " (from Spring Boot)";
     }
