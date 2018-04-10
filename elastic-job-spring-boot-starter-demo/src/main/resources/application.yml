@@ -3,3 +3,11 @@ spring:
     zookeeper:
       server-lists: 127.0.0.1:6181
       namespace: elastic-job-spring-boot-stater-demo
+    simple:
+      cron: 0/2 * * * * ?
+      shardingTotalCount: 3
+      shardingItemParameters: 0=Beijing,1=Shanghai,2=Guangzhou
+      listenerClass: com.zen.spring.boot.demo.elasticjob.listener.MyElasticJobListener
+      distributedListenerClass: com.zen.spring.boot.demo.elasticjob.listener.MyDistributeElasticJobListener
+      startedTimeoutMilliseconds: 5000
+      completedTimeoutMilliseconds: 10000
