@@ -1,13 +1,37 @@
 spring:
   elasticjob:
+    #注册中心配置
     zookeeper:
       server-lists: 127.0.0.1:6181
       namespace: elastic-job-spring-boot-stater-demo
-    simple:
-      cron: 0/2 * * * * ?
-      shardingTotalCount: 3
-      shardingItemParameters: 0=Beijing,1=Shanghai,2=Guangzhou
-      listenerClass: com.zen.spring.boot.demo.elasticjob.listener.MyElasticJobListener
-      distributedListenerClass: com.zen.spring.boot.demo.elasticjob.listener.MyDistributeElasticJobListener
-      startedTimeoutMilliseconds: 5000
-      completedTimeoutMilliseconds: 10000
+    #简单作业配置
+    simples:
+      #spring简单作业示例配置
+      spring-simple-job:
+        jobClass: com.zen.spring.boot.demo.elasticjob.job.SpringSimpleJob
+        cron: 0/2 * * * * ?
+        sharding-total-count: 3
+        sharding-item-parameters: 0=Beijing,1=Shanghai,2=Guangzhou
+        listener:
+          listener-class: com.zen.spring.boot.demo.elasticjob.listener.MyElasticJobListener
+    #流式作业配置
+    dataflows:
+      #spring简单作业示例配置
+      spring-dataflow-job:
+        jobClass: com.zen.spring.boot.demo.elasticjob.job.SpringDataflowJob
+        cron: 0/2 * * * * ?
+        sharding-total-count: 3
+        sharding-item-parameters: 0=Beijing,1=Shanghai,2=Guangzhou
+        streaming-process: true
+        listener:
+          distributedListenerClass: com.zen.spring.boot.demo.elasticjob.listener.MyDistributeElasticJobListener
+          startedTimeoutMilliseconds: 5000
+          completedTimeoutMilliseconds: 10000
+    #脚本作业配置
+    scripts:
+      #脚本作业示例配置
+      script-job:
+        cron: 0/2 * * * * ?
+        sharding-total-count: 3
+        sharding-item-parameters: 0=Beijing,1=Shanghai,2=Guangzhou
+        script-command-line: E:/githubProject/spring-boot-starter-demo/elastic-job-spring-boot-starter-demo/src/main/resources/script/demo.bat
