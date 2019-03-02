@@ -18,6 +18,8 @@
         <module>dubbo-spring-boot-demo-api</module>
     </modules>
 
+    <packaging>pom</packaging>
+
     <dependencies>
         <dependency>
             <groupId>javax.servlet</groupId>
